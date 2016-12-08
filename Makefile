@@ -2,7 +2,6 @@
 
 IMAGE_NAME = bind
 IMAGE_OPTIONS = \
-    --privileged \
     -p 127.0.0.1:53:53 \
     -p 127.0.0.1:53:53/udp \
     -v /var/named:/var/named:rw \
