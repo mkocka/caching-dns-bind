@@ -12,7 +12,7 @@ run: build
 debug: build
 	docker run -t -i $(IMAGE_OPTIONS) $(IMAGE_NAME)
 
-build: Dockerfile files/*
+build: Makefile Dockerfile files/*
 	docker build --tag=$(IMAGE_NAME) .
 
 test:
