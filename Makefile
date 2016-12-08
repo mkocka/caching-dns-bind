@@ -3,8 +3,7 @@
 IMAGE_NAME = bind
 IMAGE_OPTIONS = \
     -p 127.0.0.1:53:53 \
-    -p 127.0.0.1:53:53/udp \
-    -v /etc/named:/etc/named:ro
+    -p 127.0.0.1:53:53/udp
 
 run: build
 	docker run -d $(IMAGE_OPTIONS) $(IMAGE_NAME)
