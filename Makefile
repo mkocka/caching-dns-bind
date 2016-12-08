@@ -6,7 +6,7 @@ IMAGE_OPTIONS = \
     -p 127.0.0.1:53:53 \
     -p 127.0.0.1:53:53/udp \
     -v /var/named:/var/named:rw \
-    -v /etc/named:/etc/named
+    -v /etc/named:/etc/named:ro
 
 run: build
 	docker run -d $(IMAGE_OPTIONS) $(IMAGE_NAME)
