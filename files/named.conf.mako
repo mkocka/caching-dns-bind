@@ -15,6 +15,11 @@ options {
 	statistics-file "/var/named/data/named_stats.txt";
 	memstatistics-file "/var/named/data/named_mem_stats.txt";
 	allow-query { 127.0.0.0/8; ::1/128; 172.17.0.0/16; };
+	forwarders {
+	% for forwarder in nameservers:
+	    ${forwarder};
+	% endfor
+	};
 
 	/* 
 	 - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
