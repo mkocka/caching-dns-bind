@@ -2,6 +2,7 @@
 
 IMAGE_NAME = bind
 IMAGE_OPTIONS = \
+    -v $(shell pwd)/config.yaml:/config.yaml:ro \
     -p 127.0.0.1:53:53 \
     -p 127.0.0.1:53:53/udp
 
