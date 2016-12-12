@@ -10,4 +10,4 @@ RUN /files/bind-config.sh
 
 EXPOSE 53
 
-CMD ["/usr/sbin/named", "-u", "named", "-g"]
+CMD ["/files/bind-run.sh"]
