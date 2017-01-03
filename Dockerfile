@@ -10,4 +10,4 @@ RUN /files/bind-config.sh
 
 EXPOSE 53
 
-CMD ["/files/bind-run.sh"]
+CMD ["/files/bind-run.py"]
